@@ -1,0 +1,324 @@
+/* ==========================================================================
+   1. ESTILOS GENERALES (TEMA OSCURO PREMIUM)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121214; /* Fondo oscuro principal */
+    color: #e1e1e6; /* Texto claro */
+}
+
+/* Formato base de las tarjetas de noticias */
+section {
+    background: #1a1a1e; /* Tarjetas ligeramente más claras que el fondo */
+    border: 1px solid #29292e;
+    padding: 12px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+section img {
+    width: 100%;
+    height: 180px; 
+    display: block;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Estilos de texto internos */
+section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #ffffff; 
+}
+
+section p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #c4c4cc; 
+}
+
+.leer-mas {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e1a95f; /* Enlaces en color dorado estilo Cheems */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.leer-mas:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   2. DISEÑO PARA CELULAR (Una noticia debajo de otra)
+   ========================================================================== */
+header {
+    background: #1a1a1e; 
+    padding: 15px;
+    border-bottom: 2px solid #e1a95f; /* Línea divisoria dorada */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 2px solid #e1a95f;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    color: #ffffff; 
+}
+
+.menu-movil {
+    background: none;
+    border: 2px solid #e1a95f; 
+    border-radius: 6px;
+    color: #e1a95f;
+    font-size: 1.5rem;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: none; 
+    width: 100%; 
+    flex-direction: column; 
+    margin-top: 15px;
+}
+
+.nav-links.activo {
+    display: flex; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #a8a8b3;
+    font-size: 1.1rem;
+    padding: 12px 5px;
+    border-top: 1px solid #29292e; 
+    display: block;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #e1a95f; 
+}
+
+/* Rejilla Móvil: 1 sola columna vertical */
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr; 
+    padding: 15px;
+    gap: 20px; 
+}
+
+.texto-tarjeta {
+    padding-top: 12px;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #29292e;
+    margin-top: 40px;
+    background: #1a1a1e;
+    color: #7c7c8a;
+    font-size: 0.9rem;
+}
+
+
+/* ==========================================================================
+   3. DISEÑO PARA PC / LAPTOP (Se activa a partir de 850px)
+   ========================================================================== */
+@media (min-width: 850px) {
+
+    .header-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu-movil {
+        display: none; 
+    }
+
+    .nav-links {
+        display: flex; 
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    .nav-links a {
+        border-top: none;
+        padding: 5px 0;
+        font-size: 0.95rem;
+        font-weight: bold;
+    }
+
+    /* Distribución del periódico en PC: 3 columnas */
+    .contenedor {
+        max-width: 1200px;
+        margin: 30px auto;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-areas: 
+            "deportes deportes musica"
+            "comida moda tecnologia";
+        gap: 25px;
+        padding: 0 15px;
+    }
+
+    /* Asignamos las áreas */
+    .deportes { grid-area: deportes; }
+    .musica { grid-area: musica; }
+    .comida { grid-area: comida; }
+    .moda { grid-area: moda; }
+    .tecnologia { grid-area: tecnologia; }
+    
+    /* Deportes se vuelve horizontal para destacar como portada */
+    .deportes {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+    .deportes img {
+        width: 45%;
+        height: 220px;
+    }
+    .deportes .texto-tarjeta {
+        width: 55%;
+        padding-top: 0;
+    }
+
+    .musica img, .comida img, .moda img, .tecnologia img {
+        height: 150px;
+    }
+}
+
+/* ==========================================================================
+   4. ESTILOS PARA LAS VENTANAS EMERGENTES GIGANTES (MODALES)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Fondo ultra oscuro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Clase que activa el JavaScript */
+.modal-overlay.mostrar {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background: #1a1a1e;
+    border: 2px solid #e1a95f; /* Borde dorado nítido */
+    padding: 30px;
+    border-radius: 12px;
+    
+    /* ¡Aquí hacemos que abarque casi toda la pantalla! */
+    width: 92%; 
+    height: 85%; 
+    max-width: 1100px; 
+    
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    color: #e1e1e6;
+    
+    /* Deslizador interno por si pones muchísimo texto */
+    overflow-y: auto; 
+}
+
+/* Imagen extendida dentro del cuadro */
+/* Ajuste de la imagen dentro del cuadro gigante */
+.modal-img {
+    width: 100%;       /* Obliga a la imagen a ocupar todo el ancho disponible... */
+    max-width: 100%;   /* ...pero NUNCA salirse del cuadro */
+    height: auto;      /* Hace que la altura se adapte de forma proporcional sin deformarse */
+    max-height: 400px; /* Evita que la imagen sea excesivamente alta */
+    object-fit: cover; /* Recorta la imagen limpiamente si es necesario */
+    border-radius: 6px;
+    margin: 20px 0;
+    display: block;    /* La alinea correctamente en el flujo del texto */
+}
+.modal-content h2 {
+    color: #ffffff;
+    font-size: 2rem; 
+    padding-right: 45px;
+    border-bottom: 1px solid #29292e;
+    padding-bottom: 12px;
+}
+
+.modal-content p {
+    font-size: 1.1rem; 
+    line-height: 1.7;
+    color: #c4c4cc;
+    margin-top: 15px;
+}
+
+/* Botón de cerrar (X) en la esquina superior */
+.btn-cerrar {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 2.5rem;
+    color: #a8a8b3;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    line-height: 1;
+}
+
+.btn-cerrar:hover {
+    color: #e1a95f;
+    transform: scale(1.1);
+}
+/* Estilos personalizados para la barra de audio */
+audio {
+    background-color: #1a1a1e; /* Fondo que combina con tus tarjetas */
+    border-radius: 8px;
+    border: 1px solid #e1a95f; /* Borde dorado característico */
+    padding: 2px;
+}
+
+/* Tip para navegadores basados en Chromium (Chrome, Edge, Opera) */
+audio::-webkit-media-controls-enclosure {
+    background-color: #1a1a1e;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #1a1a1e;
+}

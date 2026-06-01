@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnología -Chems</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <img src="IMG/images.jpg" alt="Logo" class="logo">
+                <h1>Tecnología -Chems</h1>
+            </div>
+            <button class="menu-movil">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index2.html">Deportes</a>
+                <a href="index3.html">Música</a>
+                <a href="index4.html">Comida</a>
+                <a href="index5.html">Moda</a>
+                <a href="index6.html" class="active">Tecnología</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="deportes"> 
+            <img src="IMG/telefono.jpg" alt="Lanzamiento Smartphone">
+            <div class="texto-tarjeta">
+                <h2>El Teléfono del Futuro</h2>
+                <p>Analizamos el Samsung Galaxy S26 Ultra, el dispositivo móvil de gama alta que redefine el mercado. Revisa su presentación oficial y sus características premium.</p>
+                <a href="#" class="leer-mas btn-abrir" data-modal="modal-tec1">Ver video y detalles...</a>
+            </div>
+        </section>
+
+        <section class="musica">
+            <img src="IMG/drones.jpg" alt="Drones de Guerra">
+            <div class="texto-tarjeta">
+                <h2>Tecnología en el Frente de Batalla</h2>
+                <p>El uso estratégico y masivo de drones en el conflicto entre Ucrania y Rusia cambia las reglas de la guerra moderna para siempre.</p>
+                <a href="#" class="leer-mas btn-abrir" data-modal="modal-tec2">Ver análisis completo...</a>
+            </div>
+        </section>
+
+        <section class="comida">
+            <img src="IMG/cuantica.jpg" alt="Descubrimiento Científico">
+            <div class="texto-tarjeta">
+                <h2>Revolución Científica Actual</h2>
+                <p>Un avance histórico en computación cuántica promete resolver problemas complejos en segundos. Te explicamos este hallazgo.</p>
+                <a href="#" class="leer-mas btn-abrir" data-modal="modal-tec3">Leer más...</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-tec1" class="modal-overlay">
+        <div class="modal-content">
+            <span class="btn-cerrar">&times;</span>
+            <h2>Presentación Oficial: Samsung Galaxy S26 Ultra y la nueva era móvil</h2>
+            
+            <div class="video-contenedor" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px; border-radius: 8px; border: 1px solid #e1a95f;">
+                <iframe src="https://www.youtube.com/embed/n306W9v7B7c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" allowfullscreen></iframe>
+            </div>
+            
+            <p style="margin-bottom: 15px; line-height: 1.6; font-size: 1.05rem;">
+                El mercado de los smartphones ha alcanzado un nuevo hito arquitectónico y tecnológico con la llegada del **Samsung Galaxy S26 Ultra**. Este dispositivo premium destaca por integrar el procesador Snapdragon de última generación con fotolitografía avanzada, optimizado específicamente para ejecutar funciones de inteligencia artificial generativa de forma nativa en el chip, sin necesidad de consumir datos ni conectarse a la nube.
+            </p>
+
+            <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem;">
+                Su pantalla plana antirreflejos ofrece niveles de brillo sin precedentes bajo luz solar directa, mientras que su chasis de titanio reforzado reduce el peso total. El sistema de cámaras incorpora un sensor principal renovado y telefotos avanzados asistidos por IA para capturar imágenes con nitidez profesional en cualquier condición de luz. En el video superior puedes observar el análisis de su diseño y rendimiento en tiempo real.
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-tec2" class="modal-overlay">
+        <div class="modal-content">
+            <span class="btn-cerrar">&times;</span>
+            <h2>Guerra de Drones: La redefinición de la estrategia militar</h2>
+            
+            <img src="IMG/rusia.jpg" alt="Uso de Drones" class="modal-img" style="width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1a95f;">
+            
+            <p style="margin-bottom: 15px; line-height: 1.6; font-size: 1.05rem;">
+                El enfrentamiento bélico entre Rusia y Ucrania se ha convertido en un punto de inflexión histórico donde los vehículos aéreos no tripulados (drones) de bajo costo dictan el ritmo de las operaciones tácticas. Pequeños cuadricópteros modificados comercialmente y unidades FPV (visión en primera persona) controlados de forma remota sustituyen funciones tradicionales de reconocimiento y reconocimiento avanzado, permitiendo un monitoreo del terreno en tiempo real.
+            </p>
+
+            <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem;">
+                Ambos bandos libran una batalla constante en el espectro radioeléctrico. Los sistemas de guerra electrónica, enfocados en el bloqueo de frecuencias y la interferencia de señales GPS, avanzan semana con semana para neutralizar estas aeronaves. Esta rápida evolución tecnológica en el frente de batalla plantea profundos debates internacionales sobre la seguridad global y la progresiva automatización de los sistemas de defensa.
+            </p>
+
+            <div style="background: #222226; padding: 15px; border-left: 4px solid #eb5e55; border-radius: 4px; color: #ffffff; font-size: 0.95rem;">
+                <strong>⚠️ Impacto Geopolítico:</strong> Analistas internacionales señalan que las tácticas e innovaciones desarrolladas en este escenario están obligando a los ejércitos globales a rediseñar por completo sus manuales de estrategia y programas de equipamiento.
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-tec3" class="modal-overlay">
+        <div class="modal-content">
+            <span class="btn-cerrar">&times;</span>
+            <h2>Hito Científico: Logran estabilidad récord en computación cuántica</h2>
+            
+            <img src="IMG/COMPUTADORA.jpg" alt="Computación Cuántica" class="modal-img" style="width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1a95f;">
+            
+            <p style="margin-bottom: 15px; line-height: 1.6; font-size: 1.05rem;">
+                Un equipo internacional de investigadores ha anunciado un descubrimiento que podría acelerar drásticamente el desarrollo de la computación cuántica práctica. Han conseguido mitigar la "decoherencia", el principal obstáculo físico que provoca pérdida de información en los cúbits debido a las más mínimas variaciones de temperatura o interferencias electromagnéticas del entorno.
+            </p>
+
+            <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem;">
+                Gracias al uso de nuevos materiales semiconductores capaces de aislar los estados cuánticos por más tiempo, este avance abre las puertas para que los sistemas del futuro realicen simulaciones moleculares complejas, optimizaciones logísticas globales y análisis de datos avanzados a una velocidad inalcanzable para las supercomputadoras convencionales. Estamos ante la antesala de una nueva era en el procesamiento de la información.
+            </p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 30px;">
+        <a href="index.html" class="leer-mas" style="border: 1px solid #e1a95f; padding: 10px 20px; border-radius: 4px; text-decoration: none; display: inline-block;">← Volver al Inicio</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

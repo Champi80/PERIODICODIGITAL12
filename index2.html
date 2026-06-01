@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deportes - Mi Periódico Digital</title>
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="brand">
+                <img src="IMG/images.jpg" alt="Logo" class="logo">
+                <h1>Deportes-Chems</h1>
+            </div>
+            <button class="menu-movil">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="index2.html" class="active">Deportes</a>
+                <a href="index3.html">Música</a>
+                <a href="index4.html">Comida</a>
+                <a href="index5.html">Moda</a>
+                <a href="index6.html">Tecnología</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="deportes">
+            <img src="IMG/resumendepartido.jpg" alt="Resumen">
+            <div class="texto-tarjeta">
+                <h2> Resumen del Partido</h2>
+                <p>Revive los momentos más intensos del último encuentro. Análisis de las jugadas clave, los goles y declaraciones.</p>
+                <a href="#" class="leer-mas btn-abrir" data-modal="modal1">Ver detalles del partido...</a>
+            </div>
+        </section>
+
+        <section class="musica">
+            <img src="IMG/mundial.jpg" alt="Noticia">
+            <div class="texto-tarjeta">
+                <h2>La historia del Futbol</h2>
+                <p>En esta ocasion hablaremos de la historia de los mundiales sus inicios y finales</p>
+                <a href="#" class="leer-mas btn-abrir" data-modal="modal2">Leer reprotaje completo...</a>
+            </div>
+        </section>
+
+        <section class="comida">
+            <img src="IMG/messi.jpg" alt="Curiosidades">
+            <div class="texto-tarjeta">
+                <h2>Messi</h2>
+                <p>Abordaremos un pequeño repaso de la historia de Messi uno de los mejores Futbolistas</p>
+                <a href="#" class="leer-mas btn-abrir" data-modal="modal3">Ver datos curiosos...</a>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal1" class="modal-overlay">
+        <div class="modal-content">
+            <span class="btn-cerrar">&times;</span>
+            <h2>Resumen Completo del Partido</h2>
+            <img src="IMG/resumenpumas.jpg" alt="Resumen Extendido" class="modal-img">
+           <p>¡Partidazo histórico en Ciudad Universitaria! Los Pumas de la UNAM firmaron una actuación perfecta frente a su afición y derrotaron de manera contundente 3 goles por 0 a las Águilas del América, asegurando con garra su boleto a la siguiente ronda del torneo con un marcador global definitivo de 6 a 3.</p>
+
+<p>Revive la intensidad del encuentro, el análisis de las jugadas clave y los vibrantes goles narrados por los expertos en este reporte especial en audio.</p>
+            
+            <div class="reproductor-audio" style="margin-top: 20px;">
+                <p style="font-size: 0.95rem; color: #e1a95f; margin-bottom: 8px; font-weight: bold;">
+                    🎧 Escuchar reporte en audio:
+                </p>
+                <audio controls style="width: 100%;">
+                    <source src="IMG/Video Project 2.m4a" type="audio/mpeg">
+                    Tu navegador no soporta la reproducción de audio.
+                </audio>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+<div id="modal2" class="modal-overlay">
+    <div class="modal-content">
+        <span class="btn-cerrar">&times;</span>
+        <h2>La Épica Historia de los Mundiales</h2>
+        
+        <p style="margin-bottom: 15px; line-height: 1.6;">Desde el histórico torneo inaugural en Uruguay 1930, donde apenas participaron 13 naciones, la Copa del Mundo de la FIFA ha evolucionado hasta convertirse en el evento social y deportivo más grande del planeta. A lo largo de casi un siglo, el torneo ha sido el escenario de hazañas legendarias, rivalidades geopolíticas trasladadas a la cancha y la consagración de figuras míticas como Pelé, Maradona y Messi.</p>
+
+        <p style="margin-bottom: 20px; line-height: 1.6;">Este viaje en el tiempo no solo destaca los cambios tácticos y tecnológicos del balompié, sino también la evolución de las camisetas, los balones icónicos y las sedes que paralizaron al mundo cada cuatro años. Revive el recorrido cronológico de todas las selecciones que alcanzaron la gloria eterna y grabaron su nombre en el trofeo más codiciado en el siguiente video documental.</p>
+        
+        <div class="contenedor-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 8px; border: 1px solid #e1a95f; margin: 20px 0;">
+            <iframe 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                src="https://www.youtube.com/embed/RAt-fzSVamY" 
+                title="Todos los CAMPEONES y FINALES de los MUNDIALES" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <p style="font-size: 0.9rem; color: #a8a8b3; font-style: italic; margin-top: 10px;">Cortesía de Memorias del Fútbol. Un repaso imperdible por las grandes finales que paralizaron al planeta.</p>
+    </div>
+</div>
+<div id="modal3" class="modal-overlay">
+    <div class="modal-content">
+        <span class="btn-cerrar">&times;</span>
+        <h2>Historias de Gloria: El Inicio de Lionel Messi</h2>
+        
+        <img src="IMG/MESSI2.jpeg" alt="Lionel Messi Inicios" class="modal-img" style="width: 100%; max-height: 350px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1a95f;">
+        
+        <p style="margin-bottom: 15px; line-height: 1.6; font-size: 1.05rem;">
+            Mucho antes de levantar la Copa del Mundo y poseer ocho Balones de Oro, **Lionel Andrés Messi** era solo un niño menudo que corría con un balón pegado al pie en las calles de Rosario, Argentina. A los cuatro años, su abuela Celia lo llevó por primera vez a un club de barrio, intuyendo el talento descomunal que el mundo entero tardaría un poco más en descubrir.
+        </p>
+
+        <p style="margin-bottom: 15px; line-height: 1.6; font-size: 1.05rem;">
+            Sin embargo, el camino hacia el estrellato estuvo lleno de obstáculos. A los 10 años, fue diagnosticado con una deficiencia en la hormona del crecimiento. El tratamiento médico era sumamente costoso para su familia y los clubes locales se negaron a financiarlo. Fue en ese momento crítico cuando el **F.C. Barcelona** apareció en el mapa: tras una mítica prueba donde deslumbró a los visores, el club catalán firmó su primer contrato en una servilleta de papel y se comprometió a costear su tratamiento.
+        </p>
+
+        <p style="margin-bottom: 20px; line-height: 1.6; font-size: 1.05rem;">
+            Aquel niño que cruzó el Atlántico con una maleta llena de dudas y problemas físicos se convirtió, a base de disciplina, resiliencia y una magia innata, en el futbolista más grande de todos los tiempos. Su desarrollo en la masía y su posterior debut a los 17 años cambiaron la historia del balompié para siempre, demostrando que ninguna limitación física es más grande que el tamaño de un sueño.
+        </p>
+
+        <div style="background: #222226; padding: 15px; border-left: 4px solid #e1a95f; border-radius: 4px; font-style: italic; color: #ffffff;">
+            "Cuando veías a Leo, parecía que el balón era una extensión de su cuerpo. Era imposible quitárselo sin hacerle falta". — Relato de sus entrenadores en las divisiones inferiores.
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
